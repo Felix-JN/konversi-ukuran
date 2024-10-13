@@ -1,0 +1,53 @@
+#include <iostream>
+using namespace std;
+
+// Fungsi untuk konversi meter ke satuan lain
+void meterToOthers(double meter) {
+    cout << "Kilometer: " << meter / 1000 << endl;
+    cout << "Centimeter: " << meter * 100 << endl;
+    cout << "Milimeter: " << meter * 1000 << endl;
+    cout << "Inci: " << meter * 39.3701 << endl;
+    cout << "Kaki: " << meter * 3.28084 << endl;
+    cout << "Yard: " << meter * 1.09361 << endl;
+    cout << "Mil: " << meter / 1609.34 << endl;
+}
+
+// Fungsi untuk konversi kilometer ke satuan lain
+void kilometerToOthers(double kilometer) {
+    cout << "Meter: " << kilometer * 1000 << endl;
+    cout << "Centimeter: " << kilometer * 100000 << endl;
+    cout << "Milimeter: " << kilometer * 1000000 << endl;
+    cout << "Inci: " << kilometer * 39370.1 << endl;
+    cout << "Kaki: " << kilometer * 3280.84 << endl;
+    cout << "Yard: " << kilometer * 1093.61 << endl;
+    cout << "Mil: " << kilometer / 1.60934 << endl;
+}
+
+int main() {
+    int pilihan;
+    double nilai;
+
+    cout << "Pilih jenis konversi:\n";
+    cout << "1. Meter ke lainnya\n";
+    cout << "2. Kilometer ke lainnya\n";
+    cout << "Masukkan pilihan: ";
+    cin >> pilihan;
+
+    switch (pilihan) {
+        case 1:
+            cout << "Masukkan nilai dalam meter: ";
+            cin >> nilai;
+            meterToOthers(nilai);
+            break;
+        case 2:
+            cout << "Masukkan nilai dalam kilometer: ";
+            cin >> nilai;
+            kilometerToOthers(nilai);
+            break;
+        default:
+            cout << "Pilihan tidak valid!\n";
+            break;
+    }
+
+    return 0;
+}
